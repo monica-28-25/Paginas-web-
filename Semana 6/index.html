@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sesion6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    
+<body class="container mt-4">
+
     <h2>Registro</h2>
 
-    <form id="formulario">
-        <input type="text" id="nombre">
-        <p id="errorNombre"></p>
+    <form id="formulario" class="col-md-4">
+        <input type="text" id="nombre" class="form-control mb-2" placeholder="Nombre">
+        <p id="errorNombre" class="text-danger"></p>
 
-        <input type="email" id="correo">
-        <p id="errorCorreo"></p>
-        
-        <input type="number" id="edad">
-        <p id="errorEdad"></p>
+        <input type="email" id="correo" class="form-control mb-2" placeholder="Correo">
+        <p id="errorCorreo" class="text-danger"></p>
 
-        <input type="password" id="password">
-        <p id="errorPassword"></p>
+        <input type="number" id="edad" class="form-control mb-2" placeholder="Edad">
+        <p id="errorEdad" class="text-danger"></p>
 
-        <button type="submit">Registrarse</button>
+        <input type="password" id="password" class="form-control mb-2" placeholder="Contraseña">
+        <p id="errorPassword" class="text-danger"></p>
+
+        <textarea id="descripcion" class="form-control mb-2" placeholder="Descripcion"></textarea>
+
+        <button type="submit" class="btn btn-dark">Registrarse</button>
     </form>
 
-    <hr> 
+    <hr>
     <h3>Registros actualmente</h3>
-    <div id="listaUsuarios"></div>
+    <table id="tablaUsuarios" class="table table-bordered" style="display:none;">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Edad</th>
+                <th>Descripcion</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+    </table>
+
     <script src="validacion.js"></script>
-    
 </body>
 </html>
